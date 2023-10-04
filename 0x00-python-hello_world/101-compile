@@ -1,2 +1,2 @@
 #!/usr/bin/python
-python3 -m complieall $PYFILE
+python3 -m complieall $PYFILE -b
