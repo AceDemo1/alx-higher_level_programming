@@ -6,7 +6,7 @@ if lastd > 5:
     print(f"Last digit of {number} is " + str(lastd) + " and is greater than 5")
 elif lastd < 6:
     print(f"Last digit of {number} is " + str(lastd) + " and is less than 6 and not 0")
-elif lastd == 0:
+else:
     print(f"Last digit of {number} is " + str(lastd) + " and is 0")
  
 
