@@ -2,4 +2,4 @@
 for ap in range(ord('a'), ord('z') + 1):
     if ap == ord('e') or ap == ord('q'):
         continue
-    print('{}'.format(char(ap)))
+    print('{}'.format(chr(ap)))
