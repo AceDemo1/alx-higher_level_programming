@@ -4,4 +4,4 @@ for alpha in range(ord('z'), ord('a'), -1):
         conv = alpha - 32
     else:
         conv = 0
-    print("{}".format(chr(alpha) - conv), end='')
+    print("{}".format(chr((alpha) - conv), end=''))
