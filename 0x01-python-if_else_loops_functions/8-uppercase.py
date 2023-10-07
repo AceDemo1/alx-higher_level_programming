@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def uppercase(str):
-    for low in range(len(str):
-        if ord('a') <= str[low] <= 'z':
+    for low in range(len(str)):
+        if ord('a') <= str[low] <= ord('z'):
             upper = ord('a') + ord('A')
         else:
             upper = 0
