@@ -3,10 +3,10 @@ if __name__ == "__main__":
     form sys import argv
     numargs = len(argv)
     if numargs < 2:
-        print("0 arguments.")
+        print("{} arguments.".format(numargs - 1))
     else:
         if numargs == 2:
-            print("1 argument:")
+            print("{} argument:".format(numargs - 1))
         elif numargs > 2:
             print("{} arguments:".format(numargs - 1))
         for i in range(1, numargs):
