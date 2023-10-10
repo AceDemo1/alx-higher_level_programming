@@ -2,7 +2,7 @@
 if __name__ == "__main__":
     form sys import argv
     numargs = len(argv)
-    if numargs == 1:
+    if numargs < 2:
         print("0 arguments.")
     else:
         if numargs == 2:
