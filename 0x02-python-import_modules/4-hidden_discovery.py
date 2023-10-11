@@ -5,5 +5,4 @@ if __name__ == "__main__":
         for i in names
                 if i[:2] == "__":
                         continue
-                print(i)
-        
+                print("{:s}".format(i))
