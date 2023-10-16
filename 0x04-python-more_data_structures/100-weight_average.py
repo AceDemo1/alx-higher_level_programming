@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-weight_average(my_list=[]):
+def weight_average(my_list=[]):
         if my_list:        
                 num = 0
                 dem = 0
