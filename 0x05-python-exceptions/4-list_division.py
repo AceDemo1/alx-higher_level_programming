@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 def list_division(my_list_1, my_list_2, list_length):
     lis = []
     for i in range(list_length):
@@ -8,12 +9,12 @@ def list_division(my_list_1, my_list_2, list_length):
             if my_list_2[i] == 0:
                 c = 0
                 print("division by 0")
-            elif not (isinstance(my_list_1[i], (int, float)) and isinstance(my_list_2[i], (int, float))): 
+            elif not (isinstance(my_list_1[i], (int, float)) and isinstance(my_list_2[i], (int, float))):
                 c = 0
                 print("wrong type")
             elif len(my_list_1) != len(my_list_2):
                 print("out of range")
-                c = 0
         finally:
             lis.append(c)
     return (lis)
+
