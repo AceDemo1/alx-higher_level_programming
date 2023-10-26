@@ -8,7 +8,7 @@ def list_division(my_list_1, my_list_2, list_length):
             if my_list_2[i] == 0:
                 c = 0
                 print("division by 0")
-            elif type(my_list_1[i]) is not int or type(my_list_2[i]) is not int:
+            elif not isinstance(my_list_1[i], (int, str)) or not isinstance(my_list_2[i], (int, str)):
                 c = 0
                 print("wrong type")
             elif len(my_list_1) != len(my_list_2):
