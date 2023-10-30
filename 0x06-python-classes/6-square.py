@@ -1,32 +1,23 @@
 #!/usr/bin/python3
-"""My square module"""
+"""class square"""
 
 
 class Square:
-    """defines a square"""
+    """private instance"""
 
     def __init__(self, size=0, position=(0, 0)):
-        """Create a Square
-        Args:
-            size: length of a side of Square
-            position: where the square is (coordinates)
-        """
-        self.size = size
-        self.position = position
+        """initialize the class withe the size instance"""
+        self.__size = size
+        self.__position = position
 
     def __str__(self):
         self.my_print()
 
     @property
     def size(self):
-        """"The propery of size as the len of a side of Square
-        Raises:
-            TypeError: if size != int
-            ValueError: if size < 0
-        """
-        return self.__size
+        return (self.__size)
 
-    @size.setter
+  @size.setter
     def size(self, value):
         if not isinstance(value, int):
             raise TypeError('size must be an integer')
