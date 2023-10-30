@@ -7,8 +7,8 @@ class Square:
 
     def __init__(self, size=0, position=(0, 0)):
         """initialize the class withe the size instance"""
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     def __str__(self):
         self.my_print()
