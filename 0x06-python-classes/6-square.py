@@ -33,11 +33,11 @@ class Square:
         for elem in value:
             if type(elem) is not int:
                 raise \
-                        TypeError('position must be a tuple of 2 positive integers')
+                    TypeError('position must be a tuple of 2 positive integers')
         for elem in value:
             if elem < 0:
                 raise \
-                        TypeError('position must be a tuple of 2 positive integers')
+                    TypeError('position must be a tuple of 2 positive integers')
         self.__position = value
 
     def area(self):
