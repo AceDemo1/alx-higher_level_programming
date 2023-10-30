@@ -1,46 +1,45 @@
 #!/usr/bin/python3
-"""class square"""
+"""My square module"""
 
 
 class Square:
-    """private instance"""
+    """defines a square"""
 
     def __init__(self, size=0, position=(0, 0)):
-        """initialize the class withe the size instance"""
-        self.__size = size
-        self.__position = position
+        """Create a Square
+        Args:
+            size: length of a side of Square
+            position: where the square is (coordinates)
+        """
+        self.size = size
+        self.position = position
 
     def __str__(self):
         self.my_print()
 
     @property
     def size(self):
-        return (self.__size)
+        """"The propery of size as the len of a side of Square
+        Raises:
+            TypeError: if size != int
+            ValueError: if size < 0
+        """
+        return self.__size
 
     @size.setter
     def size(self, value):
-        if type(value) is not int:
+        if not isinstance(value, int):
             raise TypeError('size must be an integer')
-        elif value < 0:
+        if value < 0:
             raise ValueError('size must be >= 0')
-        else:
-            self.__size = value
+        self.__size = value
 
     @property
     def position(self):
-        """property of the coordinates of this Square
-        Raises:
-            TypeError: if value != a tuple of 2 integers < 0
-        """
-        return self.__position
+        return (self.__position)
 
     @position.setter
     def position(self, value):
-        """set the position of this Square
-        Args: value as a tuple of two positive integers
-        Raises:
-            TypeError: if value is not a tuple or any int in tuple < 0
-        """
         if not isinstance(value, tuple):
             raise TypeError('position must be a tuple of 2 positive integers')
         if len(value) != 2:
@@ -50,26 +49,16 @@ class Square:
         self.__position = value
 
     def area(self):
-        """Get the area of a Square
-        Returns: The size squared
-        """
-        return self.__size * self.__size
-
-    def pos_print(self):
-        """returns the position in spaces"""
-        pos = ""
-        if self.size == 0:
-            return "\n"
-        for w in range(self.position[1]):
-            pos += "\n"
-        for w in range(self.size):
-            for i in range(self.position[0]):
-                pos += " "
-            for j in range(self.size):
-                pos += "#"
-            pos += "\n"
-        return pos
+        """to cal. the area"""
+        return (self.__size ** 2)
 
     def my_print(self):
-        """print the square in position"""
-        print(self.pos_print(), end='')
+        if self.__size == 0:
+            print()
+        else:
+            print('\n' * self.__position[1], end='')
+            for i in range(self.__size):
+                print(" " * self.__position[0], end='')
+                for j in range(self.__size):
+                    print("#", end='')
+                print()
