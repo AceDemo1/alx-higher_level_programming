@@ -6,7 +6,6 @@ class Square:
     """private instance"""
 
     def __init__(self, size=0):
-
         """initialize the class withe the size instance"""
         if type(size) is not int:
             raise TypeError('size must be an integer')
