@@ -41,7 +41,7 @@ class Square:
         """to cal. the area"""
         return (self.__size ** 2)
 
-     def pos_print(self):
+    def pos_print(self):
         """returns the position in spaces"""
         pos = ""
         if self.size == 0:
