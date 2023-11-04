@@ -6,8 +6,6 @@ SinglyLinkedList and Node objects.
 
 """
 
-
-
 class Node:
     """Defines a node of a singly linked list."""
 
