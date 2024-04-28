@@ -2,9 +2,10 @@
 def matrix_divided(matrix, div):
     j = []
     for i in range(len(matrix)):
+        l = []
         for k in range(len(matrix[i])):
-            j += [matrix[k] / div]
-        print(",")
+            l += [matrix[k][i] / div]
+        j += [l]
     return j
             
 
