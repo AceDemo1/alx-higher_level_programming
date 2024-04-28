@@ -4,7 +4,7 @@ def matrix_divided(matrix, div):
     for i in range(len(matrix)):
         l = []
         for k in range(len(matrix[i])):
-            l += [matrix[k][i] / div]
+            l += [round(matrix[k][i] / div, 2)]
         j += [l]
     return j
             
