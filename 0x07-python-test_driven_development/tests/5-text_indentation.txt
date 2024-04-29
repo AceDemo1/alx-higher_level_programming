@@ -8,6 +8,7 @@ TypeError: text must be a string
 >>> i("this. is")
 this.
 
+
 is
 
 Checking for no args:
