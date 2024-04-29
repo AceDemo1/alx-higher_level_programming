@@ -9,7 +9,28 @@ class TestMax(unittest.TestCase):
         self.assertEqual(max_integer([1, 2]), 2)
 
     def test_max1(self):
+        self.assertEqual(max_integer([3, 2]), 3)
+
+    def test_max2(self):
         self.assertEqual(max_integer([1, 1]), 1)
+
+    def test_max(self):
+        self.assertEqual(max_integer([1, 2, 0]), 2)
+
+    def test_max(self):
+        self.assertEqual(max_integer([-1, 2]), 2)
+
+    def test_max(self):
+        self.assertEqual(max_integer([1, 2]), 2)
+
+    def test_max(self):
+        self.assertEqual(max_integer([-3, -2]), -2)
+
+    def test_max(self):
+        self.assertEqual(max_integer([2]), 2)
+
+    def test_max(self):
+        self.assertNone(max_integer([])
 
     def test_max_string(self):
         with self.assertRaises(TypeError):
