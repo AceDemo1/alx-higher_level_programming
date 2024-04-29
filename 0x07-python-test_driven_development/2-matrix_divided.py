@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def matrix_divided(matrix, div):
-    if type(matix) is not list:
+    if type(matrix) is not list:
         raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
     if type(div) is not int and type(div) is not float:
         raise TypeError('div must be a number')
