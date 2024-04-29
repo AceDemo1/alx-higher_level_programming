@@ -34,6 +34,6 @@ Traceback (most recent call last):
 	 ...
 ZeroDivisionError: division by zero
 
->>> matrix_divided([[1, 2], [2, 3], 1)
+>>> matrix_divided([[1, 2], [2, 3]], 1)
 [[1, 2], [2, 3]]
 
