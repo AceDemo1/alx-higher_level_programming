@@ -30,7 +30,7 @@ class TestMax(unittest.TestCase):
         self.assertEqual(max_integer([2]), 2)
 
     def test_max8(self):
-        self.assertNone(max_integer([])
+        self.assertNone(max_integer([]))
 
     def test_max_string(self):
         with self.assertRaises(TypeError):
