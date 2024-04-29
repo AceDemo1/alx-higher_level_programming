@@ -7,7 +7,7 @@ TypeError: text must be a string
 
 >>> i("this. is")
 this.
-<BLANKLINE>
+
 is
 
 Checking for no args:
