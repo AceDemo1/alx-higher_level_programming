@@ -1,4 +1,4 @@
->>> i = = __import__("5-text_indentation").text_indentation
+>>> i = __import__("5-text_indentation").text_indentation
 
 >>> i(1)
 Traceback (most recent call last):
