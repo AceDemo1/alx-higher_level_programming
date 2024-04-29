@@ -1,0 +1,10 @@
+>>> i = __import__("4-print_square").print_square
+
+>>> i(2)
+##
+##
+
+>> i("")
+Traceback (most recent call last):
+         ...
+TypeError: size must be an integer
