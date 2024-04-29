@@ -9,6 +9,5 @@ class TestMax(unittest.TestCase):
             self.assertEqual(max_integer([1, 1]), 1)
 
         def test_max(self):
-            self.assertEqual(max_integer([1, 2]), 2)
-if __name__ == "__main__":
-    unittest.main()
+            with self.assertRaises(TypeError):
+                max_integer([1, 'i'])
