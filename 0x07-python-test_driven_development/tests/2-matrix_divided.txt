@@ -29,11 +29,11 @@ Traceback (most recent call last):
          ...
 TypeError: matrix must be a matrix (list of lists) of integers/float
 
->>> matrix_divided(matrix, 0)
+>>> matrix_divided([[1, 2], [2, 3]], 0)
 Traceback (most recent call last):
 	 ...
 ZeroDivisionError: division by zero
 
 >>> matrix_divided([[1, 2], [2, 3]], 1)
-[[1, 2], [2, 3]]
+[[1.0, 2.0], [2.0, 3.0]]
 

@@ -7,7 +7,7 @@ The 2-matrix_divided module supplies one function, matrix_divided(matrix, div).
 
 def matrix_divided(matrix, div):
     """Divides all elements in the matrix by div"""
-    m = 'matrix must be a matrix (list of lists) of integers/floats'
+    m = "matrix must be a matrix (list of lists) of integers/floats"
     m2 = "Each row of the matrix must have the same size"
     if type(matrix) is not list:
         raise TypeError(m)
