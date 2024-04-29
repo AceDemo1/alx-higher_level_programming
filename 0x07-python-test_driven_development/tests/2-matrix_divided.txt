@@ -59,4 +59,4 @@ Checking for more than 2 args:
 
 Checking for division by infinity:
 	 >>> matrix_divided(matrix, float('inf'))
-	 [[0.0], [0.0], [0.0]]
+[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
