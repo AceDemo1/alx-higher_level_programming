@@ -5,13 +5,14 @@ Traceback (most recent call last):
          ...
 TypeError: text must be a string
 
->>> i("this. is"")
+>>> i("this. is")
 this.
-
+<BLANKLINE>
+<BLANKLINE>
 is
 
 Checking for no args:
-	 >>> text_indentation()
+	 >>> i()
 	 Traceback (most recent call last):
 	 ...
 	 TypeError: text_indentation() missing 1 required positional argument: 'text'
