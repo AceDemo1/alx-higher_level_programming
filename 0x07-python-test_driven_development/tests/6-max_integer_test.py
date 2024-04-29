@@ -13,6 +13,3 @@ class TestMax(unittest.TestCase):
         with self.assertRaises(TypeError):
             max_integer([1, 'i'])
 
-if __name__ == "__main__":
-    unittest.main()
-
