@@ -1,0 +1,17 @@
+>>> i = = __import__("5-text_indentation").text_indentation
+
+>>> i(1)
+Traceback (most recent call last):
+         ...
+TypeError: text must be a string
+
+>>> i("this. is"")
+this.
+
+is
+
+Checking for no args:
+	 >>> text_indentation()
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: text_indentation() missing 1 required positional argument: 'text'
