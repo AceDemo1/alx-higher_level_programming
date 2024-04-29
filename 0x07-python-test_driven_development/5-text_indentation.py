@@ -5,6 +5,6 @@ def text_indentation(text):
     sym = ['.', '?', ':']
     for i in text:
         if i in sym:
-            print('\n\n', end='')
+            print(i + '\n\n', end='')
             continue
         print(i, end='')
