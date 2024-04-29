@@ -6,5 +6,4 @@ def text_indentation(text):
     for i in text:
         if i in sym:
             print(i + '\n\n', end='')
-            continue
         print(i, end='')
