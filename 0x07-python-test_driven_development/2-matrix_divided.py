@@ -17,7 +17,7 @@ def matrix_divided(matrix, div):
         l = []
         for k in range(len(matrix[i])):
             if type(matrix[i][k]) is not int and type(matrix[i][k]) is not float:
-                raise TypeError('div must be a number')
+                raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
             l += [round(matrix[i][k] / div, 2)]
         j += [l]
     return j
