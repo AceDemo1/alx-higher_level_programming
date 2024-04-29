@@ -26,7 +26,7 @@ def matrix_divided(matrix, div):
         matx = []
         for k in range(len(matrix[i])):
             if type(matrix[i][k]) is not int and \
-                type(matrix[i][k]) is not float:
+            type(matrix[i][k]) is not float:
                 raise TypeError(m)
             matx += [round(matrix[i][k] / div, 2)]
         j += [matx]
