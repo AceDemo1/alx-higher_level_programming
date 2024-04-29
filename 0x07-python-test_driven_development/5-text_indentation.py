@@ -3,7 +3,7 @@ def text_indentation(text):
     if type(text) is not str:
         raise TypeError('text must be a string')
     sym = ['.', '?', ':']
-    for i in test:
+    for i in text:
         if i in sym:
             print('\n\n', end='')
             continue
