@@ -7,7 +7,7 @@ This module contains a function that multiplies 2 matrices
 
 
 def matrix_mul(m_a, m_b):
-     """This function multiplies two matrices
+    """This function multiplies two matrices
 
     Args:
         m_a (list of lists of int/float): Matrix to be multiplied
@@ -47,9 +47,9 @@ def matrix_mul(m_a, m_b):
                     raise TypeError("each row of m_a must be of the same size")
                 if not m_b[k][j]:
                     raise TypeError("each row of m_b must be of the same size")
-                if type(m_a[i][k]) is not int:
+                if type(m_a[i][k]) is not int or type(m_a[i][k]) is not float:
                     raise TypeError("m_a should contain only integers or floats")
-                if type(m_b[k][j]) is not int:
+                if type(m_b[k][j]) is not int or type(m_b[k][j]) is not float:
                     raise TypeError("m_b should contain only integers or floats")
                 el += m_a[i][k] * m_b[k][j]
             ro.append(el)
