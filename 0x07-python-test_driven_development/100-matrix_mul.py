@@ -41,7 +41,7 @@ def matrix_mul(m_a, m_b):
         if type(m_a[i]) is not list:
             raise TypeError('m_a must be a list of lists')
         ro = []
-        for j in range(len(m_a[0])):
+        for j in range(len(m_b[0])):
             el = 0
             for k in range(len(m_b)):
                 if type(m_b[k]) is not list:
