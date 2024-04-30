@@ -28,6 +28,12 @@ def matrix_mul(m_a, m_b):
 
     if type(m_a) is not list:
        raise TypeError('m_a must be a list')
+    for i in range(len(m_a)):
+        if type(m_a[i]) is not list:
+            raise TypeError('m_a must be a list of lists')
+    for k in range(len(m_b)):
+        if type(m_b[k]) is not list:
+            raise TypeError('m_b must be a list of lists')
     if type(m_b) is not list:
        raise TypeError('m_b must be a list')
     if not m_a or not m_a[0]:
@@ -40,8 +46,6 @@ def matrix_mul(m_a, m_b):
     re = []
     lea = len(m_a[0])
     for i in range(len(m_a)):
-        if type(m_a[i]) is not list:
-            raise TypeError('m_a must be a list of lists')
         if len(m_a[i]) != lea:
             raise TypeError("each row of m_a must be of the same size")
         ro = []
@@ -49,8 +53,6 @@ def matrix_mul(m_a, m_b):
             el = 0
             leb = len(m_b[0])
             for k in range(len(m_b)):
-                if type(m_b[k]) is not list:
-                    raise TypeError('m_b must be a list of lists')
                 if len(m_b[k]) != leb:
                     raise TypeError("each row of m_b must be of the same size")
                 if type(m_a[i][k]) is not int and type(m_a[i][k]) is not float:
