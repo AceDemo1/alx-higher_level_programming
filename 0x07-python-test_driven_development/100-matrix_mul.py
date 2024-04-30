@@ -51,7 +51,7 @@ def matrix_mul(m_a, m_b):
                     raise TypeError("each row of m_b must be of the same size")
                 if type(m_a[i][k]) is not int and type(m_a[i][k]) is not float:
                     raise TypeError("m_a should contain only integers or floats")
-                if type(m_b[k][j]) is not int anu type(m_b[k][j]) is not float:
+                if type(m_b[k][j]) is not int and type(m_b[k][j]) is not float:
                     raise TypeError("m_b should contain only integers or floats")
                 el += m_a[i][k] * m_b[k][j]
             ro.append(el)
