@@ -43,7 +43,7 @@ def matrix_mul(m_a, m_b):
         if len(m_a[i]) != lea:
             raise TypeError("each row of m_a must be of the same size")
         ro = []
-        for j in range(len(m_a[0])):
+        for j in range(len(m_b[0])):
             el = 0
             leb = len(m_b[0])
             for k in range(len(m_b)):
