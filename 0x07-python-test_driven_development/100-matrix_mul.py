@@ -31,11 +31,11 @@ def matrix_mul(m_a, m_b):
     for i in range(len(m_a)):
         if type(m_a[i]) is not list:
             raise TypeError('m_a must be a list of lists')
+    if type(m_b) is not list:
+       raise TypeError('m_b must be a list')
     for k in range(len(m_b)):
         if type(m_b[k]) is not list:
             raise TypeError('m_b must be a list of lists')
-    if type(m_b) is not list:
-       raise TypeError('m_b must be a list')
     if not m_a or not m_a[0]:
         raise ValueError("m_a can't be empty")
     if not m_b or not m_b[0]:
