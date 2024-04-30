@@ -40,8 +40,6 @@ def matrix_mul(m_a, m_b):
         raise ValueError("m_a can't be empty")
     if not m_b or not m_b[0]:
         raise ValueError("m_b can't be empty")
-    if len(m_a[0]) != len(m_b):
-        raise ValueError("m_a and m_b can't be multiplied")
 
     re = []
     lea = len(m_a[0])
@@ -62,4 +60,6 @@ def matrix_mul(m_a, m_b):
                 el += m_a[i][k] * m_b[k][j]
             ro.append(el)
         re.append(ro)
+    if len(m_a[0]) != len(m_b):
+        raise ValueError("m_a and m_b can't be multiplied")
     return re
