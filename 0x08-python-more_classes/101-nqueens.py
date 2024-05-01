@@ -1,10 +1,9 @@
-#!/usr/bin/python3
 import sys
 
 def is_safe(board, row, col, N):
-    # Check this row on left side
-    for i in range(col):
-        if board[row][i] == 1:
+    # Check if there is a queen in the same column
+    for i in range(row):
+        if board[i][col] == 1:
             return False
 
     # Check upper diagonal on left side
@@ -12,44 +11,44 @@ def is_safe(board, row, col, N):
         if board[i][j] == 1:
             return False
 
-    # Check lower diagonal on left side
-    for i, j in zip(range(row, N, 1), range(col, -1, -1)):
+    # Check upper diagonal on right side
+    for i, j in zip(range(row, -1, -1), range(col, N)):
         if board[i][j] == 1:
             return False
 
     return True
 
-def solve_nqueens_util(board, col, N):
-    if col >= N:
-        return True
+def solve_n_queens_util(board, row, N, result):
+    # Base case: If all queens are placed, add the current solution to result
+    if row == N:
+        queens_pos = []
+        for i in range(N):
+            for j in range(N):
+                if board[i][j] == 1:
+                    queens_pos.append([i, j])
+        result.append(queens_pos)
+        return
 
-    for i in range(N):
-        if is_safe(board, i, col, N):
-            board[i][col] = 1
-            if solve_nqueens_util(board, col + 1, N):
-                return True
-            board[i][col] = 0
+    # Consider this row and try placing a queen in all columns one by one
+    for col in range(N):
+        if is_safe(board, row, col, N):
+            board[row][col] = 1
+            solve_n_queens_util(board, row + 1, N, result)
+            board[row][col] = 0  # Backtrack
 
-    return False
+def solve_n_queens(N):
+    if not isinstance(N, int):
+        print("N must be a number")
+        sys.exit(1)
 
-def solve_nqueens(N):
-    board = [[0 for _ in range(N)] for _ in range(N)]
-    if not solve_nqueens_util(board, 0, N):
-        return []
+    if N < 4:
+        print("N must be at least 4")
+        sys.exit(1)
 
-    solutions = []
-    for row in board:
-        solution = []
-        for i, col in enumerate(row):
-            if col == 1:
-                solution.append([i, row.index(col)])
-        solutions.append(solution)
-
-    return solutions
-
-def print_solutions(solutions):
-    for solution in solutions:
-        print(solution)
+    board = [[0] * N for _ in range(N)]
+    result = []
+    solve_n_queens_util(board, 0, N, result)
+    return result
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
@@ -58,12 +57,11 @@ if __name__ == "__main__":
 
     try:
         N = int(sys.argv[1])
-        if N < 4:
-            raise ValueError
     except ValueError:
-        print("N must be a number and >= 4")
+        print("N must be a number")
         sys.exit(1)
 
-    solutions = solve_nqueens(N)
-    print_solutions(solutions)
+    solutions = solve_n_queens(N)
+    for solution in solutions:
+        print(solution)
 
