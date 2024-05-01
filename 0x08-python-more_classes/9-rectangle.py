@@ -78,3 +78,7 @@ class Rectangle:
             return rect_1
         else:
             return rect_2
+
+    def square(cls, size=0):
+        """ Class method """
+        return cls(size, size)
