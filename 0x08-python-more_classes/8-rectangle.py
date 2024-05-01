@@ -6,7 +6,7 @@ class Rectangle:
     """ Define rectangle class """
     number_of_instances = 0
     print_symbol = '#'
-    
+
     def __init__(self, width=0, height=0):
         """ Instantation """
         self.width = width
@@ -55,8 +55,8 @@ class Rectangle:
         """ str """
         if self.__width == 0 or self.__height == 0:
             return ''
-        return (Rectangle.print_symbol * self.__width + '\n') * (self.__height - 1) + \
-            Rectangle.print_symbol * self.__width
+        return (str(self.print_symbol) * self.__width + '\n') \
+            * (self.__height - 1) + str(self.print_symbol) * self.__width
 
     def __repr__(self):
         """ repr """
