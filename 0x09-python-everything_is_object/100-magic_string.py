@@ -1,3 +1,4 @@
 #!/usr/bin/python3
-def magic_string():
-    return lambda n: ', '.join(['BestSchool'] * n)
+def magic_string(li=[]):
+    li += ["BestSchool"]
+    return ','.join(li)
