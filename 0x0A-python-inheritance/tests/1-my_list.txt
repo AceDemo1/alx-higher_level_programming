@@ -1,9 +1,9 @@
 >>> i = __import__('1-my_list').MyList
 
->>> print(isinstance(i, list))
-False
+>>> print(isinstance( i, list))
+True
 
 >>> j = i()
 >>> j.append(3)
->>> print(j)
+>>> print( j)
 [1, 2, 3]
