@@ -4,7 +4,7 @@
 >>> j.append(3)
 >>> print( j)
 [3]
->>> j.print_sorted
+>>> j.print_sorted()
 [3]
 
 >>> print(isinstance(j, list))
