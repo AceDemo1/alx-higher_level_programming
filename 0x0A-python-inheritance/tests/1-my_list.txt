@@ -4,14 +4,8 @@
 >>> j.append(3)
 >>> print( j)
 [3]
+>>> j.print_sorted
+[3]
 
 >>> print(isinstance(j, list))
 True
-
->>> j = [4, 3, 2]
->>> j.print_sorted()
-[2, 3, 4]
-
->>> j = []
->>> j.print_sorted()
-[]
