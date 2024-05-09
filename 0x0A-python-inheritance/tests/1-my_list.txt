@@ -8,3 +8,8 @@
 >>> print(isinstance(j, list))
 True
 
+>>> print(sorted(j))
+[3]
+
+>>> print(sorted([]))
+[]
