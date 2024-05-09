@@ -12,7 +12,7 @@
 [3]
 >>> print( j)
 [3]
->>>j = i()
+>>> j = i()
 >>> j.append(-1)
 >>> j.append(3)
 >>> j.print_sorted()
