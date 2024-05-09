@@ -1,0 +1,9 @@
+>>> i = __import__('1-my_list').MyList
+
+>>> print(isistance(MyList, list))
+True
+
+>>> j = [1, 2]
+>>> j.append(3)
+[1, 2, 3]
+
