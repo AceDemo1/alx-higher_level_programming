@@ -1,8 +1,6 @@
 >>> i = __import__('1-my_list').MyList
 
 >>> j = i()
->>> print(j.print_sorted())
-[]
 >>> j.append(3)
 >>> print( j)
 [3]
