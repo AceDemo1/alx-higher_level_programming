@@ -8,8 +8,9 @@
 >>> print(isinstance(j, list))
 True
 
->>> j.print_sorted()
-[3]
+>>> j = [4, 3, 2]
+j.print_sorted()
+[2, 3, 4]
 
 >>> j = []
 >>> j.print_sorted()
