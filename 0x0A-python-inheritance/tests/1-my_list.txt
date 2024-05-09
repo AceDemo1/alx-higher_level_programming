@@ -9,7 +9,7 @@
 True
 
 >>> j = [4, 3, 2]
-j.print_sorted()
+>>> j.print_sorted()
 [2, 3, 4]
 
 >>> j = []
