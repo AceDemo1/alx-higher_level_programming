@@ -3,7 +3,7 @@
 >>> j = i()
 >>> print(j)
 []
->>> j.printed_sorted()
+>>> j.print_sorted()
 []
 >>> j.append(3)
 >>> print( j)
