@@ -3,6 +3,7 @@
 >>> print(isinstance(i, list))
 False
 
->>> j = [1, 2]
+>>> j = i()
 >>> j.append(3)
-g1, 2, 3]
+>>> print(j)
+[1, 2, 3]
