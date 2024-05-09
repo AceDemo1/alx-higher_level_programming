@@ -10,6 +10,8 @@
 [3]
 >>> j.print_sorted()
 [3]
+>>> print( j)
+[3]
 >>> j.append(-1)
 >>> j.print_sorted()
 [-1, 3]
