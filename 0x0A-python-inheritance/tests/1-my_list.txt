@@ -1,6 +1,6 @@
 >>> i = __import__('1-my_list').MyList
 
->>> print(isinstance(MyList, list))
+>>> print(isinstance(i, list))
 True
 
 >>> j = [1, 2]
