@@ -9,7 +9,31 @@ TypeError: ade must be an integer
 
 >>> y.integer_validator('ade', -1)
 Traceback (most recent call last):
-ValueError: ade must be greater than 0
+galueError: ade must be greater than 0
+
+>>> y.integer_validator('ade', 0)
+Traceback (most recent call last):
+galueError: ade must be greater than 0
+
+>>> y.integer_validator('ade', (4,6))
+Traceback (most recent call last):
+TypeError: ade must be an integer
+
+>>> y.integer_validator('ade', [4,6])
+Traceback (most recent call last):
+TypeError: ade must be an integer
+
+>>> y.integer_validator('ade', True)
+Traceback (most recent call last):
+TypeError: ade must be an integer
+
+>>> y.integer_validator('ade', {4,6})
+Traceback (most recent call last):
+TypeError: ade must be an integer
+
+>>> y.integer_validator('ade', None)
+Traceback (most recent call last):
+TypeError: ade must be an integer
 
 >>> y.integer_validator('ade')
 Traceback (most recent call last):
@@ -22,3 +46,6 @@ TypeError: integer_validator() takes 3 positional arguments but 4 were given
 >>> y.integer_validator()
 Traceback (most recent call last):
 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+>>> y.area()
+Exception: area() is not implemented
