@@ -5,11 +5,11 @@
 
 >>> y.integer_validator('ade', 'ok')
 Traceback (most recent call last):
-TypeError: width must be an integer
+TypeError: ade must be an integer
 
 >>> y.integer_validator('ade', -1)
 Traceback (most recent call last):
-ValueError: width must be greater than 0
+ValueError: ade must be greater than 0
 
 >>> y.integer_validator('ade')
 Traceback (most recent call last):
