@@ -15,12 +15,12 @@ class Rectangle(BaseGeometry):
         * Private instance method: def __init__(self, width, height)
     """
     def __init__(self, width, height):
-         """
+        """
         The initialization method.
 
         Args:
             - __width (int, private)
-            - __height (int, private)
+           - __height (int, private)
         """
         self.integer_validator('width', width)
         self.integer_validator('height', height)
