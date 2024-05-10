@@ -30,8 +30,10 @@ class Rectangle(BaseGeometry):
         self.__width = width
         self.__height = height
 
-    def are(self):
+    def area(self):
+        """ area """
         return self.__height * self.__width
 
     def __str__(self):
+        """ print """
         return [Rectangle] self.__width/self.__height
