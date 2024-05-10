@@ -22,7 +22,7 @@ class Rectangle(BaseGeometry):
         The initialization method.
 
         Args:
-            - __width (int, private)
+           - __width (int, private)
            - __height (int, private)
         """
         self.integer_validator('width', width)
