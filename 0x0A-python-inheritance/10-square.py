@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 """ square class """
-
-
 i = __import__(9-rectangle.py).Rectangle
-j = __import__(7-base_geometry.py).BaseGeometry
 
 
 class Square(Rectangle):
