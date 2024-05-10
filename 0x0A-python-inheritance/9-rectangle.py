@@ -16,7 +16,7 @@ class Rectangle(BaseGeometry):
     The class Rectangle define:
         * Private instance method: def __init__(self, width, height)
     """
-    
+
     def __init__(self, width, height):
         """
         The initialization method.
