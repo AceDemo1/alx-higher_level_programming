@@ -1,24 +1,24 @@
 >>> i = __import__('7-base_geometry').BaseGeometry
 
 >>> y = i()
->>> y('ade', 1)
+>>> y.integer_validator('ade', 1)
 
->>> y('ade', 'ok')
+>>> y.integer_validator('ade', 'ok')
 Traceback (most recent call last):
 TypeError: width must be an integer
 
->>> y('ade', -1)
+>>> y.integer_validator('ade', -1)
 Traceback (most recent call last):
 ValueError: width must be greater than 0
 
->>> y('ade')
+>>> y.integer_validator('ade')
 Traceback (most recent call last):
 TypeError: integer_validator() missing 1 required positional argument: 'value'
 
->>> y('ade', 0, 2)
+>>> y.integer_validator('ade', 0, 2)
 Traceback (most recent call last):
 TypeError: integer_validator() takes 3 positional arguments but 4 were given
 
->>> y()
+>>> y.integer_validator()
 Traceback (most recent call last):
 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
