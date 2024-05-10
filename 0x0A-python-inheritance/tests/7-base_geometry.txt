@@ -9,11 +9,11 @@ TypeError: ade must be an integer
 
 >>> y.integer_validator('ade', -1)
 Traceback (most recent call last):
-galueError: ade must be greater than 0
+ValueError: ade must be greater than 0
 
 >>> y.integer_validator('ade', 0)
 Traceback (most recent call last):
-galueError: ade must be greater than 0
+ValueError: ade must be greater than 0
 
 >>> y.integer_validator('ade', (4,6))
 Traceback (most recent call last):
