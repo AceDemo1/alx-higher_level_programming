@@ -8,5 +8,4 @@ class Square(i):
 
     def __init__(self, size):
         """ validate and make size private """
-        self.integer_validator('size', size)
         super().__init__(size, size)
