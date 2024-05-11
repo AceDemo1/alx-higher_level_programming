@@ -5,9 +5,8 @@
 class MyInt(int):
     def __ne__(self, i):
         """inverts ne"""
-        return super().__eq__(self, i)
+        return super().__eq__(i)
 
     def __eq__(self, i):
         """invert eq"""
-        return super().__nq__(self, i)
-    
+        return super().__nq__(i)
