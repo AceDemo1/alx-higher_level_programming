@@ -5,7 +5,7 @@
 def add_attribute(ob, attr, va):
     """define func"""
 
-    if isinstance(ob, type) and not hasattr(ob, '__slot__'):
-        setattr(ob, attr, va)
-    else:
+    if not isinstance(ob, type) and hasattr(ob, '__slot__'):
         raise TypeError("can't add new attribute")
+    else:
+        setattr(ob, attr, va)
