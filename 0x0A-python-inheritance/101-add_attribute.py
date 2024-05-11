@@ -7,3 +7,4 @@ def add_attribute(ob, attr, va):
 
     if type(ob) != type:
         raise TypeError("can't add new attribute")
+    setattr(ob, attr, va)
