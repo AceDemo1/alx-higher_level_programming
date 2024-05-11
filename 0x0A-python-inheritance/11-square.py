@@ -13,4 +13,4 @@ class Square(i):
 
     def __str__(self):
         """ print """
-        return f"[Square] {self.size}/{self.size}"
+        return f"[Square] {self.__size}/{self.__size}"
