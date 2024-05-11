@@ -8,4 +8,4 @@ def add_attribute(ob, attr, va):
     if not hasattr(ob, '__dict__'):
         raise TypeError("can't add new attribute")
     else:
-        setattr(ob, attr, va)
+        ob.attr = va
