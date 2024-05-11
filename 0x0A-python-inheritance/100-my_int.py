@@ -9,4 +9,4 @@ class MyInt(int):
 
     def __eq__(self, i):
         """invert eq"""
-        return super().__nq__(i)
+        return super().__ne__(i)
