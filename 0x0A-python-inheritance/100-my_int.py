@@ -3,6 +3,8 @@
 
 
 class MyInt(int):
+    """define MyInt"""
+
     def __ne__(self, i):
         """inverts ne"""
         return super().__eq__(i)
