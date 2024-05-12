@@ -2,7 +2,7 @@
 """read file"""
 
 
-def write_file(filename="", text=""):
+def write_file(filename=""):
 	"""define func"""
 
 	with open(filename, r) as f:
