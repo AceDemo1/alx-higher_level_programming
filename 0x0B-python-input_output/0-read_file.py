@@ -3,7 +3,7 @@
 
 
 def read_file(filename=""):
-	"""define func"""
+    """define func"""
 
-	with open(filename, "r") as f:
-		print(f.read(), end='')
+    with open(filename, "r") as f:
+    print(f.read(), end='')
