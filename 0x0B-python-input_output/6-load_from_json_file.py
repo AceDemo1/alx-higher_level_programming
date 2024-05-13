@@ -6,4 +6,4 @@ import json
 def load_from_json_file(filename):
     """define func"""
     with open(filename, "r") as f:
-        return json.load(f.read())
+        return json.loads(f.read())
