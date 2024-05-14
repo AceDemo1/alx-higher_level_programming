@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+The module define the function 'pascal_triangle()'
+"""
+
+
 def pascal_triangle(n):
     """pascal triangle"""
     if n <= 0:
