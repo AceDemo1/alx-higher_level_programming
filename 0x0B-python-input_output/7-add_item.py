@@ -7,5 +7,5 @@ try:
     li = j("add_item.json")
 except FileNotFoundError:
     li = []
-    li.extend(k[1:])
-    i(li, "add_item.json")
+li.extend(k[1:])
+i(li, "add_item.json")
