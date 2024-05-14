@@ -17,4 +17,4 @@ class Student:
                 if i in self.__dict__:
                     k[i] = self.__dict__[i]
             return k
-        return self.__dict__  
+        return self.__dict__
