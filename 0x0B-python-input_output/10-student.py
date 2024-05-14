@@ -15,6 +15,6 @@ class Student:
             k = {}
         for i in attrs:
             if i in self.__dict__:
-                k[i] = self.__dict__
+                k[i] = self.__dict__[i]
             return k
         return self.__dict__  
