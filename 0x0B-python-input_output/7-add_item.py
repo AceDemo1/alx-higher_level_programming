@@ -6,4 +6,4 @@ k = __import__("sys").argv
 
 l = []
 l.extend(k[1:])
-j(l, "add_item.json")
+i(l, "add_item.json")
