@@ -11,7 +11,7 @@ class Student:
 
     def to_json(self, attrs=None):
         """returns dict"""
-        if attr is not None:
+        if attrs is not None:
             k = {}
         for i in attrs:
             if i in self.__dict__:
