@@ -10,9 +10,8 @@ def append_after(filename="", search_string="", new_string=""):
             i = f.readline()
             if i == '':
                 break
-            k += i
-            for j in i:
-                if j == search_string:
-                    k += new_string
+            k += [i]
+            if search_string in i:
+                k += [new_string]
     with open(filename, "w") as f:
         f.writelines(k)
