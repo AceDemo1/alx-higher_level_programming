@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""append after"""
+
+
 def append_after(filename="", search_string="", new_string=""):
+    """define func"""
     with open(filename, "r") as f:
         k = []
         while True:
