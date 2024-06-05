@@ -70,3 +70,7 @@ class Rectangle(Base):
         """display # on stdout"""
         for i in range(self.height):
             print('#' * self.width)
+
+    def __str__(self):
+        """overwrite str rep"""
+        return f'[Rectangle] ({id}) {x}/{y} - {width}/{height}'
