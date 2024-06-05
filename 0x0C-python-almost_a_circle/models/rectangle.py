@@ -66,7 +66,7 @@ class Rectangle(Base):
         """define the area"""
         return self.width * self.height
 
-    def dispaly(self):
+    def display(self):
         """display # on stdout"""
         for i in range(self.height - 1):
             print('#' * self.width + '\n')
