@@ -40,20 +40,20 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        if x <= 0:
-            raise ValueError('x must be >= 0')
         return self.__x
 
     @x.setter
     def x(self, v):
+        if v <= 0:
+            raise ValueError('x must be >= 0')
         self.__x = v
 
     @property
     def y(self):
-        if y <= 0:
-            raise ValueError('y must be >= 0')
         return self.__y
 
     @y.setter
     def y(self, v):
+        if v <= 0:
+            raise ValueError('y must be >= 0')
         self.__y = v
