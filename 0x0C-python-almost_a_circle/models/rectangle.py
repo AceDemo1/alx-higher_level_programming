@@ -71,7 +71,7 @@ class Rectangle(Base):
         if self.y:
             print('\n' * self.y)
         for i in range(self.height):
-            print('' * self.x + '#' * self.width)
+            print(' ' * self.x + '#' * self.width)
 
     def __str__(self):
         """overwrite str rep"""
