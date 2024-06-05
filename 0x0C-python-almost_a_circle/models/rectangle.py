@@ -68,6 +68,5 @@ class Rectangle(Base):
 
     def display(self):
         """display # on stdout"""
-        for i in range(self.height - 1):
-            print('#' * self.width + '\n')
-        print('#' * self.width)
+        for i in range(self.height):
+            print('#' * self.width)
