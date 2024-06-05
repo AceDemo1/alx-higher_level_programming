@@ -68,8 +68,10 @@ class Rectangle(Base):
 
     def display(self):
         """display # on stdout"""
+        if y:
+            print('\n' * self.y)
         for i in range(self.height):
-            print('#' * self.width)
+            print('' * self.x + '#' * self.width)
 
     def __str__(self):
         """overwrite str rep"""
