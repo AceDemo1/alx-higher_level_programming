@@ -87,3 +87,7 @@ class Rectangle(Base):
         else:
             for i, j in kwargs.items():
                 setattr(self, i, j)
+
+    def to_dictionary(self):
+        """returns dict"""
+        return self.__dict__
