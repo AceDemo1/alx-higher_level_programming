@@ -32,7 +32,7 @@ class Square(Rectangle):
             for i, j in kwargs.items():
                 setattr(self, i, j)
 
-        def to_dictionary(self):
-            """returns dict"""
-            return {'id': self.id, 'size': self.size,
+    def to_dictionary(self):
+        """returns dict"""
+        return {'id': self.id, 'size': self.size,
                 'x': self.x, 'y': self.y}
