@@ -78,8 +78,12 @@ class Rectangle(Base):
         return f'[Rectangle] ({self.id}) {self.x}/{self.y} - \
 {self.width}/{self.height}'
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """assigns an arg to each attr"""
-        j = ['id', 'width', 'height', 'x', 'y']
-        for i in range(len(args)):
-            setattr(self, j[i], args[i])
+        if args:
+            j = ['id', 'width', 'height', 'x', 'y']
+            for i in range(len(args)):
+                setattr(self, j[i], args[i])
+        else:
+            for i, j in kwargs:
+                setattr(self, i, j)
