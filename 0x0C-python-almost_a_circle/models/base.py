@@ -31,4 +31,4 @@ class Base:
             if not list_objs:
                 f.write('[]')
             else:
-                f.write(cls.to_json_string(list(i.to_dictionary() for i in list_objs)))
+                f.write(cls.to_json_string([i.to_dictionary() for i in list_objs]))
