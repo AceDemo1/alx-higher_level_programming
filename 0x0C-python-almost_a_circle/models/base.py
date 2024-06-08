@@ -38,9 +38,9 @@ class Base:
     def from_json_string(json_string):
         """returns list of JSON rep"""
         if not json_string:
-            return '[]'
+            return []
         else:
-            return [json.loads(json_string)]
+            return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
