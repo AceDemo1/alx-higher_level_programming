@@ -42,7 +42,7 @@ class Base:
         else:
             return [json.loads(json_string)]
 
-    @staticmethod
+    @classmethod
     def create(cls, **dictionary):
         """returns instance with all attr set"""
         if cls.__name__ == 'Rectangle':
