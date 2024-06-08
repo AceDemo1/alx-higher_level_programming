@@ -32,4 +32,13 @@ class Base:
                 f.write('[]')
             else:
                 j = [i.to_dictionary() for i in list_objs]
-                f.write(Base.to_json_string(j))
+                f.write(cls.to_json_string(j))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """returns list of JSON rep"""
+        if not json_string:
+            return '[]'
+        else:
+            return json.loads(json_string)
+
