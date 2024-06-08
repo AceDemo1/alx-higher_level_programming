@@ -59,7 +59,6 @@ class Base:
         with open(i, 'r') as f:
             j = f.read()
             if j == '':
-                retur
-                n []
+                return []
             k = cls.from_json_string(j)
             return [cls.create(**li) for li in k]
