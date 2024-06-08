@@ -32,4 +32,4 @@ class Base:
                 f.write('[]')
             else:
                 j = [i.to_dictionary() for i in list_objs]
-                f.write(cls.to_json_string(j))
+                f.write(Base.to_json_string(j))
