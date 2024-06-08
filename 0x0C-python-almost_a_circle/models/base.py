@@ -49,4 +49,5 @@ class Base:
             i = cls(1, 1)
         elif cls.__name__ == 'Square':
             i = cls(1)
-        return i.update(**dictionary)
+        i.update(**dictionary)
+        return i
