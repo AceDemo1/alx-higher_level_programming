@@ -55,11 +55,11 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """returns a list of instances"""
-        i = f'{cls.__name__}'.json
+        i = f'{cls.__name__}.json'
         if not i:
             return []
         else:
             with open(i, 'r') as f:
                 j = f.read()
                 k = cls.from_json_string(j)
-                return [cls.create(**l) for l in k]
+                return [cls.create(**li) for li in k]
