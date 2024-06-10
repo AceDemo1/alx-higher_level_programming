@@ -90,7 +90,7 @@ class Base:
             r = csv.reader(f)
             h = next(r)
             ins = []
-            for i in r:
+            for row in r:
                 if cls.__name__ == 'Rectangle':
                     id, width, height, x, y = map(int, row)
                     ins_ = cls(1, 1)
