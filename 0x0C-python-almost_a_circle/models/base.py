@@ -86,7 +86,7 @@ class Base:
         i = f'{cls.__name__}.csv'
         if not os.path.isfile(i):
             return []
-        with open(i, 'r', newliine='') as f:
+        with open(i, 'r', newline='') as f:
             r = csv.reader(f)
             h = next(r)
             ins = []
