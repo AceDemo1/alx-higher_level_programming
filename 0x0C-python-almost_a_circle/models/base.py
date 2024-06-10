@@ -63,3 +63,40 @@ class Base:
             j = f.read()
             k = cls.from_json_string(j)
             return [cls.create(**li) for li in k]
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """serializes in CSV"""
+        i = f'{cls.__name__}.csv'
+        with open(i, 'w', newline='') as f:
+            w = csv.writer(f)
+            if cls.__name__ == 'Rectangle':
+                w.writerow(['id', 'width', 'height', 'x', 'y'])
+                for i in list_objs:
+                    w.writerow([i.id, i.width, i.height, i.x, i.y])
+            elif cls.__name__ == 'Square':
+                w.writerow(['id', 'size', 'x', 'y'])
+                for i in list_objs:
+                    w.writerow([i.id, i.size, i.x, i.y])
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """deserialize in CSV"""
+        i = f'{cls.__name__}.csv'
+        if not os.path.isfile(i):
+            return []
+        with open(i, 'r', newliine='') as f:
+            r = csv.reader(f)
+            h = next(r)
+            ins = []
+            for i in r:
+                if cls.__name__ == 'Rectangle':
+                    id, width, height, x, y = map(int, row)
+                    ins_ = cls(1, 1)
+                    ins_.update(id=id, width=width, height=height, x=x, y=y)
+                elif cls.__name__ == 'Square':
+                    id, size, x, y = map(int, row)
+                    ins_ = cls(1)
+                    ins_.update(id=id, size=size, x=x, y=y)
+                ins.append(ins_)
+            return ins
