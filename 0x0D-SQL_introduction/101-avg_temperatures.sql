@@ -1,0 +1,2 @@
+-- dispalys avg temp.
+USE 
