@@ -1,2 +1,3 @@
 -- dispalys avg temp.
-USE 
+USE hbtn_0c_0
+SELECT 
