@@ -1,3 +1,5 @@
 -- dispalys avg temp.
 USE hbtn_0c_0
-SELECT 
+SELECT city, AVG(*) AS avg_temp
+FROM temperatures
+
