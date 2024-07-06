@@ -4,7 +4,6 @@ FROM tv_show
 WHERE tv_show.id NOT IN (
 	SELECT tv_show_genres.show_id
 	FROM tv_show_genres
-	WHERE tv_show_genres.genres_id = (
-		SELECT tv_genres.id
-		FROM tv_genres
-		WHERE name = Comedy))
+	JOIN tv_genres ON tv_show_genres.genres_id = tv_genres.id
+	WHERE name = Comedy)
+ORDER BY tv_show.title
