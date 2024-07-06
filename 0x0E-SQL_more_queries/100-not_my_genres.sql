@@ -10,3 +10,4 @@ WHERE tv_genres.id NOT IN (
     	WHERE tv_shows.title = 'Dexter'
 )
 ORDER BY tv_genres.name;
+GROUP BY tv_genres.name;
