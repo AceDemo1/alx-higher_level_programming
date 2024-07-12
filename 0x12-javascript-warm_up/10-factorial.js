@@ -4,11 +4,11 @@ if (isNaN(i)) {
   console.log(1);
 } else {
   function fac (i) {
-    if (i == 0 || i == 1) {
+    if (i === 0 || i === 1) {
       return 1;
     } else {
-      return fac (i - 1) * i;
+      return fac(i - 1) * i;
     }
-  };
+  }
   console.log(fac(i));
 }
