@@ -3,7 +3,7 @@ const i = parseInt(process.argv[2]);
 if (isNaN(i)) {
   console.log(1);
 } else {
-  const fac = (i) => {
+  function fac (i) {
     if (i == 0 || i == 1) {
       return 1;
     } else {
