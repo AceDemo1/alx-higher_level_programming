@@ -5,4 +5,4 @@ class Rectangle {
     this.heigth = h;
   }
 }
-export.Recatangle = Reactangle;
+exports.Recatangle = Rectangle;
