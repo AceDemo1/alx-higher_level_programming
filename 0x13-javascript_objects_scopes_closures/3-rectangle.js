@@ -7,8 +7,8 @@ class Rectangle {
     }
   }
   print() {
-    for (let i = 0; i < h; i++) {
-      console.log('X'.repeat(w))
+    for (let i = 0; i < this.h; i++) {
+      console.log('X'.repeat(this.w))
     }
 }
 module.exports = Rectangle;
