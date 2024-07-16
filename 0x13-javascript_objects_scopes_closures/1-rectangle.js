@@ -1,8 +1,8 @@
 #!/usr/bin/node
 class Rectangle {
-  constructor(w, h) {
+  constructor (w, h) {
     this.width = w;
-    this.heigth = h;
+    this.height = h;
   }
 }
-exports.Recatangle = Rectangle;
+exports.Rectangle = Rectangle;
