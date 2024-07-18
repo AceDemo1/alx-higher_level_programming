@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const Square5 = require('./5-square');
 
-class Squarei extends Square5 {
+class Square extends Square5 {
   charPrint (c) {
     for (let i = 0; i < this.height; i++) {
       console.log(c ? c.repeat(this.width) : 'X'.repeat(this.width));
