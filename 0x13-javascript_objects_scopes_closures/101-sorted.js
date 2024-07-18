@@ -8,4 +8,4 @@ for (const l in i) {
   }
   k[j][k[j].length] = l;
 }
-return k;
+console.log(k);
