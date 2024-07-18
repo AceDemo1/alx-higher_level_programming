@@ -1,11 +1,11 @@
 #!/usr/bin/node
 const i = require('./101-data').dict;
 const k = {};
-for (const i in dict) {
+for (const l in i) {
   const j = dict[i];
   if (!k[j]) {
     k[j] = [];
   }
-  k[j][k[j].length] = i;
+  k[j][k[j].length] = l;
 }
 return k;
