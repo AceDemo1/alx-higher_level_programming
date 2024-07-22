@@ -3,6 +3,7 @@
 import MySQLdb
 import sys
 
+
 if __name__ == "__main__":
     def conc(na, ur, pa, db):
         """connection"""
