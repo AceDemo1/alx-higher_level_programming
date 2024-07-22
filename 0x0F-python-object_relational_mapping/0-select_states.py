@@ -1,17 +1,17 @@
 #!/usr/bin/python3
-'''lists all states'''
+"""lists all states"""
 import MySQLdb
 import sys
 
 def conc(na, ur, pa, db):
-    '''connection'''
+    """connection"""
     conn = MySQLdb.connect(
             host=na, user=ur,
             password=pa, database=db, port=3306)
     return conn
 
 def ex(conn, q):
-    '''execute'''
+    """execute"""
     cu = conn.cursor()
     cu.execute(q)
     r = cu.fetchall()
