@@ -21,7 +21,7 @@ if __name__ == "__main__":
         return r
 
     conne = conc("localhost", sys.argv[1], sys.argv[2], sys.argv[3])
-    q = "SELECT * FROM states WHERE name LIKE 'N%' COLLATE utf8_general_ci ORDER BY states.id"
+    q = "SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY states.id"
     rows = ex(conne, q)
     for i in rows:
         print(i)
