@@ -6,10 +6,10 @@ import sys
 if __name__ == "__main__":
     def conc(na, ur, pa, db):
         """connection"""
-    conn = MySQLdb.connect(
+        conn = MySQLdb.connect(
             host=na, user=ur,
             password=pa, database=db, port=3306)
-    return conn
+        return conn
 
     def ex(conn, q):
         """execute"""
