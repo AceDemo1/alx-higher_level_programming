@@ -25,4 +25,4 @@ if __name__ == "__main__":
     rows = ex(conne, q)
     for i in rows:
         print(i)
-        conne.close()    
+    conne.close()
