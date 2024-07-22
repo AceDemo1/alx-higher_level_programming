@@ -9,7 +9,7 @@ if __name__ == "__main__":
         """connection"""
         conn = MySQLdb.connect(
             host=na, user=ur,
-            password=pa, database=db, port=3306)
+            passwd=pa, database=db, port=3306)
         return conn
 
     def ex(conn, q):
