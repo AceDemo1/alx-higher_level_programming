@@ -21,7 +21,7 @@ if __name__ == "__main__":
         return r
 
     conne = conc("localhost", sys.argv[1], sys.argv[2], sys.argv[3])
-    q = "SELECT * FROM states WHERE name = '{}' ORDER BY states.id".format(sys.argv[4])
+    q = "SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY states.id".format(sys.argv[4])
     rows = ex(conne, q)
     for i in rows:
         print(i)
