@@ -3,6 +3,7 @@
 import MySQLdb
 import sys
 
+
 def conc(na, ur, pa, db):
     """connection"""
     conn = MySQLdb.connect(
@@ -18,7 +19,7 @@ def ex(conn, q):
     cu.close()
     return r
 
-conne = conc('localhost', sys.argv[1], sys.argv[2], sys.argv[3])
+conne = conc("localhost", sys.argv[1], sys.argv[2], sys.argv[3])
 q = 'SELECT * FROM states'
 rows = ex(conne, q)
 for i in rows:
