@@ -14,6 +14,6 @@ if __name__ == '__main__':
     Base.metadata.create_all(k)
     l = sessionmaker(bind=k)
     m = l()
-    i = l.query(State).all()
+    i = m.query(State).all()
     for j in i:
         print(j.id, j.name, sep=': ')
