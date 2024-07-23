@@ -22,7 +22,7 @@ if __name__ == "__main__":
 
     conne = conc("localhost", sys.argv[1], sys.argv[2], sys.argv[3])
     q = (
-            "SELECT * FROM states WHERE name LIKE BINARY '{}'"
+            "SELECT * FROM states WHERE name LIKE BINARY %s"
             "ORDER BY states.id")
     rows = ex(conne, q, (sys.argv[4],))
     for i in rows:
