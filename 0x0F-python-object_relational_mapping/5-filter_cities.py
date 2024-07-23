@@ -26,6 +26,6 @@ if __name__ == "__main__":
             "ON cities.state_id=states.id WHERE states.name=%s"
             "ORDER BY cities.id")
     rows = ex(conne, q, (sys.argv[4],))
-    for i in rows:
-        print(i[0], end=',')
+    for i in range(rows):
+        print(rows[0][i], end=',' if i < range(rows) else end='')
     conne.close()
