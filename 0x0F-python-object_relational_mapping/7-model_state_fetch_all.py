@@ -10,10 +10,10 @@ from sqlalchemy.orm import sessionmaker
 
 if __name__ == '__main__':
     k = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
-            .format(sys.argv[1], sys.argv[2], sys.argv[3]))
+                    .format(sys.argv[1], sys.argv[2], sys.argv[3]))
     Base.metadata.create_all(k)
     l = sessionmaker(bind=k)
     m = l()
-    i = m.query(State).all()
-    for j in i:
+    row = m.query(State).all()
+    for j in row:
         print(j.id, j.name, sep=': ')
