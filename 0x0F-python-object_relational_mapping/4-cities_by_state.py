@@ -22,9 +22,9 @@ if __name__ == "__main__":
 
     conne = conc("localhost", sys.argv[1], sys.argv[2], sys.argv[3])
     q = (
-            "SELECT cities.id, cities.name, states.name"
-            "FROM cities JOIN states ON cities.state_id=states.id"
-            "ORDER BY cities.id")
+            "SELECT cities.id, cities.name, states.name "
+            "FROM cities JOIN states ON cities.state_id=states.id "
+            "ORDER BY cities.id ")
     rows = ex(conne, q)
     for i in rows:
         print(i)
