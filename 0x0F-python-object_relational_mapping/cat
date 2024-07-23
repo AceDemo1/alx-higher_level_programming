@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Loop through all files in the current directory
+for file in *; do
+    # Check if it is a file
+    if [ -f "$file" ]; then
+        # Print the filename
+        echo "Filename: $file"
+        echo "----------------------------"
+        # Print the file content
+        cat "$file"
+        echo ""
+    fi
+done
+
