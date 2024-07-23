@@ -17,3 +17,4 @@ if __name__ == '__main__':
     row = m.query(State).all()
     for j in row:
         print(j.id, j.name, sep=': ')
+    m.close()
