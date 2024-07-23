@@ -4,7 +4,7 @@ Contains State class and Base, an instance of declarative_base()
 """
 import sys
 from sqlalchemy import create_engine
-from model_state import State, base
+from model_state import State, Base
 from sqlalchemy.orm import sessionmaker
 
 
