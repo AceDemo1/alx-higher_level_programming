@@ -21,7 +21,9 @@ if __name__ == "__main__":
         return r
 
     conne = conc("localhost", sys.argv[1], sys.argv[2], sys.argv[3])
-    q = 'SELECT * FROM cities ORDER BY cities.id'
+    q = (
+            'SELECT * FROM cities WHERE state_id = cities.id'
+            'ORDER BY cities.id')
     rows = ex(conne, q)
     for i in rows:
         print(i)
