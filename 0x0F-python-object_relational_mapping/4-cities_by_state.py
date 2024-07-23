@@ -23,7 +23,7 @@ if __name__ == "__main__":
     conne = conc("localhost", sys.argv[1], sys.argv[2], sys.argv[3])
     q = (
             'SELECT cities.id, cities.names, states.name'
-            'FROM cities JOIN state ON state_id=cities.id'
+            'FROM cities JOIN states ON state_id=cities.id'
             'ORDER BY cities.id')
     rows = ex(conne, q)
     for i in rows:
