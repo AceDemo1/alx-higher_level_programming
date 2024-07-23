@@ -15,7 +15,7 @@ if __name__ == "__main__":
     def ex(conn, q, pa):
         """execute"""
         cu = conn.cursor()
-        cu.execute(q)
+        cu.execute(q, pa)
         r = cu.fetchall()
         cu.close()
         return r
