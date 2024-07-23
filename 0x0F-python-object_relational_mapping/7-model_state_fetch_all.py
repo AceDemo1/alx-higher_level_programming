@@ -8,10 +8,11 @@ from model_state import State, base
 from sqlalchemy.orm import sessionmaker
 
 
-k = create_engine('mysql=mysqldb://{}:{}@localhost:2206/{}'
-        .format(sys.argv[1], sys.argv[2], sys.argv[3]))
-l = sessionmaker(bind=k)
-m = l()
-i = l.query(State).all()
-for j in i:
-    print(j.id, j.name, sep=': ')
+if __name__ == '__main__':
+    k = create_engine('mysql+mysqldb://{}:{}@localhost:2206/{}'
+            .format(sys.argv[1], sys.argv[2], sys.argv[3]))
+    l = sessionmaker(bind=k)
+    m = l()
+    i = l.query(State).all()
+    for j in i:
+        print(j.id, j.name, sep=': ')
