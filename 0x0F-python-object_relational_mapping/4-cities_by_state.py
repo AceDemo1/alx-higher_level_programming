@@ -12,7 +12,7 @@ if __name__ == "__main__":
             passwd=pa, database=db, port=3306)
         return conn
 
-    def ex(conn, q):
+    def ex(conn):
         """execute"""
         cu = conn.cursor()
         cu.execute(q)
@@ -24,7 +24,7 @@ if __name__ == "__main__":
     q = (
             'SELECT * FROM cities WHERE state_id = cities.id'
             'ORDER BY cities.id')
-    rows = ex(conne, q)
+    rows = ex(conne)
     for i in rows:
         print(i)
     conne.close()
