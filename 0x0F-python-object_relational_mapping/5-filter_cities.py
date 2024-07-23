@@ -27,5 +27,5 @@ if __name__ == "__main__":
             "ORDER BY cities.id")
     rows = ex(conne, q, (sys.argv[4],))
     for i in rows:
-        print(i)
+        print(i[0], end=',')
     conne.close()
