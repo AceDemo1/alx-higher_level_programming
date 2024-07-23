@@ -28,4 +28,5 @@ if __name__ == "__main__":
     rows = ex(conne, q, (sys.argv[4],))
     for i in range(len(rows)):
         print(rows[i][0], end=', ' if i < len(rows) - 1 else '')
+    print()
     conne.close()
