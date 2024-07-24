@@ -15,5 +15,5 @@ if __name__ == '__main__':
     sess = sessionmaker(bind=k)
     m = sess()
     row = m.query(State).first()
-    print(row.id, row.name, sep=': ')
+    print((row.id, row.name, sep=': ') if row else 'Nothing')
     m.close()
