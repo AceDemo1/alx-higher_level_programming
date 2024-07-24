@@ -15,6 +15,7 @@ if __name__ == '__main__':
     sess = sessionmaker(bind=k)
     m = sess()
     chan = m.query(State).filter(State.id == 2).first()
-    chan.name = 'New Mexico'
-    m.commit()
+    if chan:
+        chan.name = 'New Mexico'
+        m.commit()
     m.close()
