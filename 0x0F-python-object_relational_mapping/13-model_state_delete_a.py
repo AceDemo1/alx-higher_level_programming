@@ -16,6 +16,6 @@ if __name__ == '__main__':
     m = sess()
     ins = m.query(State).filter(State.name.ilike('%a%')).all()
     for i in ins:
-        m.delete(ins)
+        m.delete(i)
     m.commit()
     m.close()
