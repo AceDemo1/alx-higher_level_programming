@@ -14,7 +14,7 @@ if __name__ == '__main__':
     Base.metadata.create_all(k)
     sess = sessionmaker(bind=k)
     m = sess()
-    rows = m.query(State).filter(State=%a%).all()
+    rows = m.query(State).filter(State.name like (%a%)).all()
     for row in rows:
         print(row.id, row.name, sep=': ')
     m.close()
