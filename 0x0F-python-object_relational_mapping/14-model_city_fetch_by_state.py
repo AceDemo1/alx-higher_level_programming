@@ -4,7 +4,8 @@ Contains State class and Base, an instance of declarative_base()
 """
 import sys
 from sqlalchemy import create_engine
-from model_state import State, Base, City
+from model_state import State, Base
+from model_city import City
 from sqlalchemy.orm import sessionmaker
 
 
@@ -15,7 +16,7 @@ if __name__ == '__main__':
     sess = sessionmaker(bind=k)
     m = sess()
     row = m.query(State.name, City.id, City.name)\
-            .filter(State.id == City.state_id)all()
+            .filter(State.id == City.state_id).order_by(City.id).all()
     for i, j, k in row:
-        print(i + ': (' + j + ') ' + k)
+        print(i + ': (' + str(j) + ') ' + k)
     m.close()
