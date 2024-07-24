@@ -12,7 +12,6 @@ if __name__ == "__main__":
     # Fetch and print state with id = 2
     state = session.query(State).filter(State.id == 2).first()
     if state:
-        print(f"Original state name: {state.name}")
         state.name = "New Mexico"
         session.commit()
     session.close()
