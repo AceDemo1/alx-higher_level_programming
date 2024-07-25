@@ -16,7 +16,7 @@ if __name__ == '__main__':
     m = sess()
     state = State(name='California')
     city = City(name='San Francisco')
-    state.cities.append(state)
+    state.cities.append(city)
     m.add(state)
     m.commit()
     m.close()
