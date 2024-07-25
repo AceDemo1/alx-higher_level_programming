@@ -18,5 +18,5 @@ if __name__ == '__main__':
     row = m.query(State).order_by(State.id).all()
     for j in row:
         for k in j.cities:
-            print(f'{k.id}:{k.name} -> {j.name}')
+            print(f'{k.id}: {k.name} -> {j.name}')
     m.close()
