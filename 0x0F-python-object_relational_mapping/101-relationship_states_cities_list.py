@@ -18,5 +18,5 @@ if __name__ == '__main__':
     for j in row:
         print(j.id, j.name, sep=': ')
         for k in j.cities:
-            print('\t' + k.id + ': ' + k.name)
+            print('\t' + str(k.id) + ': ' + k.name)
     m.close()
