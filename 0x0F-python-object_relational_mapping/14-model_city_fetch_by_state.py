@@ -15,7 +15,7 @@ if __name__ == '__main__':
     Base.metadata.create_all(k)
     sess = sessionmaker(bind=k)
     m = sess()
-    row = m.query(State.name, City.id, City.name)\
+    row = m.query(State.name, City.id, City.name)
           .filter(State.id == City.state_id).order_by(City.id).all()
     for i, j, k in row:
         print(i + ': (' + str(j) + ') ' + k)
