@@ -15,7 +15,7 @@ if __name__ == '__main__':
     Base.metadata.create_all(k)
     sess = sessionmaker(bind=k)
     m = sess()
-    row = m.query(State).order_by(City.id).all()
+    row = m.query(State).order_by(State.id).all()
     for j in row:
         for k in j.cities:
             print(f'{k.id}:{k.name} -> {j.name}')
