@@ -4,8 +4,8 @@ Contains State class and Base, an instance of declarative_base()
 """
 import sys
 from sqlalchemy import create_engine
-from relationship_state import State, Base
 from sqlalchemy.orm import sessionmaker
+from relationship_state import State, Base
 from relationship_city import City
 
 if __name__ == '__main__':
