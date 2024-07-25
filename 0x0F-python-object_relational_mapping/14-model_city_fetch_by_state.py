@@ -16,7 +16,7 @@ if __name__ == '__main__':
     sess = sessionmaker(bind=k)
     m = sess()
     row = m.query(State.name, City.id, City.name)\
-         .filter(State.id == City.state_id).order_by(City.id).all()
+        .filter(State.id == City.state_id).order_by(City.id).all()
     for i, j, k in row:
         print(i + ': (' + str(j) + ') ' + k)
     m.close()
