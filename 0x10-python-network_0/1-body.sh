@@ -1,3 +1,3 @@
 #!/bin/bash
 # get request
-curl 
+curl -sL "$1"
