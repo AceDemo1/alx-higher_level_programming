@@ -1,4 +1,3 @@
 #!/bin/bash
-#body count
+# body count
 curl -s "#1" | wc -c
-
