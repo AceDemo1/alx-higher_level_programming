@@ -1,3 +1,3 @@
 #!/bin/bash
-# Get the
-curl -s "$1" | wc -c
+#body count
+curl -s "#1" | wc -c
