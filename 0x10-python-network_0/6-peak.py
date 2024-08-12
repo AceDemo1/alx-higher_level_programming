@@ -2,22 +2,24 @@
 """This module defines the function "find_peak" in a list
 of unsorted integers"""
 
-
 def find_peak(list_of_integers):
-    """Get the peak of a list"""
-
+    """func"""
     if not list_of_integers:
         return None
-    elif len(list_of_integers) == 1:
-        return list_of_integers[0]
-    elif len(list_of_integers) == 2:
-        return max(list_of_integers)
 
-    mid = int(len(list_of_integers) / 2)
-    if list_of_integers[mid] > list_of_integers[mid - 1] and\
-       list_of_integers[mid] > list_of_integers[mid + 1]:
-        return list_of_integers[mid]
-    elif list_of_integers[mid] < list_of_integers[mid - 1]:
-        return find_peak(list_of_integers[:mid])
-    else:
-        return find_peak(list_of_integers[mid + 1:])
+    n = len(list_of_integers)
+    low = 0
+    high = n - 1
+
+    while low < high:
+        mid = (low + high) // 2
+
+        # If mid is greater than its left neighbor, move to the left half
+        if mid > 0 and list_of_integers[mid] < list_of_integers[mid - 1]:
+            high = mid - 1
+        # Otherwise, move to the right half
+        else:
+            low = mid + 1
+
+    return list_of_integers[high]
+

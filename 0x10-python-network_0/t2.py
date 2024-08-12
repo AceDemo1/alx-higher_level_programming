@@ -10,13 +10,14 @@ def find_peak(list_of_integers):
     while low < high:
         mid = (low + high) // 2
         
-        # Move to the left half if the middle element is smaller than its left neighbor
+        # If mid is greater than its left neighbor, move to the left half
         if mid > 0 and list_of_integers[mid] < list_of_integers[mid - 1]:
             high = mid - 1
+        # Otherwise, move to the right half
         else:
-            low = mid
+            low = mid + 1
 
-    return list_of_integers[low]
+    return list_of_integers[high]
 
 # Example usage:
 array = [8, 9, 5, 6, 5, 1]
