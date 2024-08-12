@@ -20,7 +20,7 @@ def find_peak(list_of_integers):
     return list_of_integers[low]
 
 # Example usage:
-array = [5, 4, 3, 2, 1]
+array = [8, 9, 5, 6, 5, 1]
 peak = find_peak(array)
 print(peak)  # Expected output is 5
 
