@@ -8,6 +8,6 @@ if __name__ == "__main__":
     url = sys.argv[1]
     body = requests.get(url)
     if body.status_code >= 400:
-        print(f'Error code: {body.statues_code}')
+        print(f'Error code: {body.status_code}')
     else:
         print(body.text)
