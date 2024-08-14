@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """url"""
 import requests
-import urllib.error
 import sys
 
 
