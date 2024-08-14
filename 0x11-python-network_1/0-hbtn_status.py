@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """get"""
-import urllib
+import urllib.request
+
+
 with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as f:
     body = f.read()
     print('Body reponse:')
